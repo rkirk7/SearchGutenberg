@@ -1,0 +1,55 @@
+body {
+margin: 0;
+align-items: center;
+background-color: cornflowerblue;
+}
+
+h1{
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+div{
+    text-align: center;
+}
+
+table{
+    width: 80%; 
+    margin: 0 auto;
+    box-shadow: inset;
+    background-color: white;
+}
+
+p{
+    color: white;
+}
+
+.pages:hover{
+    color: blue;
+    cursor: pointer;
+
+}
+
+.pages{
+    color: white;
+    margin: 10px 10px 0px 0px;
+}
+
+button{
+    margin: 5px;
+}
+
+td{
+    width: 10%;
+}
+
+thead{
+    background-color: black;
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+  }
