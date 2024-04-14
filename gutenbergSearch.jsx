@@ -156,6 +156,7 @@ function App() {
         </Table>
         </div>
       )}
+      <div>
         <p>Page:</p>
       <Pagination
         items={data.results}
@@ -170,6 +171,7 @@ function App() {
  <p key="10" onClick={() => setPageSize(10)} className={pageSize === 10 ? 'pages selected' : 'pages'}>10</p>
  <p key="15" onClick={() => setPageSize(15)} className={pageSize === 15 ? 'pages selected' : 'pages'}>15</p>
  </ul>
+ </div>
 
     </Fragment>
   );
