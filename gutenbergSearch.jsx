@@ -132,6 +132,7 @@ function App() {
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
+        <div className="container">
         <Table className="table table-hover table-med table-bordered">
   <thead>
     <tr>
@@ -153,6 +154,7 @@ function App() {
   </tbody>
 
         </Table>
+        </div>
       )}
         <p>Page:</p>
       <Pagination
