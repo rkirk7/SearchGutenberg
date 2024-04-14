@@ -1,4 +1,4 @@
-const Pagination = ({ items, pageSize, onPageChange }) => {
+const Pagination = ({ items, pageSize, onPageChange, currentPage }) => {
   const { Button } = ReactBootstrap;
   if (items.length <= 1) return null;
 
@@ -6,7 +6,7 @@ const Pagination = ({ items, pageSize, onPageChange }) => {
   let pages = range(1, num);
   const list = pages.map(page => {
     return (
-      <p key={page} onClick={onPageChange} className="pages">
+      <p key={page} onClick={onPageChange} className={currentPage===page ? "pages selected" : "pages"}>
         {page}
       </p>
     );
@@ -161,13 +161,14 @@ function App() {
         items={data.results}
         pageSize={pageSize}
         onPageChange={handlePageChange}
+        currentPage={currentPage}
       ></Pagination>
        
       <p>Number of items per page:</p>
         <ul className="pagination">
- <p key="5" onClick={() => setPageSize(5)} className="pages">5</p>
- <p key="10" onClick={() => setPageSize(10)} className="pages">10</p>
- <p key="15" onClick={() => setPageSize(15)} className="pages">15</p>
+ <p key="5" onClick={() => setPageSize(5)} className={pageSize === 5 ? 'pages selected' : 'pages'}>5</p>
+ <p key="10" onClick={() => setPageSize(10)} className={pageSize === 10 ? 'pages selected' : 'pages'}>10</p>
+ <p key="15" onClick={() => setPageSize(15)} className={pageSize === 15 ? 'pages selected' : 'pages'}>15</p>
  </ul>
 
     </Fragment>
